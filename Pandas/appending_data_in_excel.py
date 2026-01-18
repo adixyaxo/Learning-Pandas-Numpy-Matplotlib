@@ -28,7 +28,7 @@ start_row = sheet.max_row
 
 # 3. Append data using 'overlay' mode
 # 'if_sheet_exists="overlay"' prevents creating a new sheet 'Sheet11'
-with pd.ExcelWriter(file_path, engine='openpyxl', mode='a', if_sheet_exists='overlay') as writer:
+with pd.ExcelWriter(file_path, engine='openpyxl', mode='a', if_sheet_exists='overlay') as writer: # important command
     df.to_excel(
         writer, #
         index=False, 
